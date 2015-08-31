@@ -1,0 +1,46 @@
+body {
+  font-size: 16px;
+  padding: 30px;
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-title {
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  border-bottom: 1px solid #CCC;
+}
+
+input, .submit-but  {
+  font-size: .9em;
+  vertical-align: center;
+  padding: .3em;
+  margin-bottom: .5em;
+  width: 12em;
+}
+.submit-but {
+  color: #fff;
+  background-color: #4E90FE;
+  border-color: #8EADD8;
+}
+
+.user-table, td {
+  font-size: .95em;
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+  padding: .3em;
+  width: 100%;
+  table-layout: fixed;
+}
+.user-table-head a {
+  color: blue;
+  text-decoration: none;
+}
+tr:nth-child(even) {
+  background: #EEE
+}
+tr:nth-child(odd) {
+  background: #FFF
+}

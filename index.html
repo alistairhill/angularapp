@@ -1,0 +1,51 @@
+<!DOCTYPE = html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Search Users</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="searchUsers">
+    <div class="app-title">
+      <h1>Search Users</h1>
+    </div>
+    <div class="container" ng-controller="mainController">
+      <form class="search-form" ng-submit="submit(query)">
+        <input type="text" placeholder="First Name" ng-model="query.firstName"></label><br>
+        <input type="text" placeholder="Last Name" ng-model="query.lastName"></label><br>
+        <input type="text" placeholder="Phone" ng-model="query.phone"></label><br>
+        <input type="text" placeholder="SSN" ng-model="query.ssn"></label><br>
+        <button type="submit" value="Submit" class="submit-but">Search</button>
+      </form>
+
+      <table class="user-table">
+        <thead class="user-table-head">
+          <tr>
+            <td>
+              <a href="#" ng-click="sortType = 'firstName'; sortReverse = !sortReverse">First Name</a>
+            </td>
+            <td>
+              <a href="#" ng-click="sortType = 'lastName'; sortReverse = !sortReverse">Last Name</a>
+            </td>
+            <td>
+              <a href="#" ng-click="sortType = 'phone'; sortReverse = !sortReverse">Phone</a>
+            </td>
+            <td>
+              <a href="#" ng-click="sortType = 'ssn'; sortReverse = !sortReverse">SSN</a>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in tableData | orderBy:sortType:sortReverse">
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.ssn }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
