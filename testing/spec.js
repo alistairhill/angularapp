@@ -8,7 +8,7 @@ var expectNames = function(expectedNames, key) {
 
 describe('Search Users', function() {
   it('should have a title', function() {
-    browser.get('http://hillalistair.com/projects/ang/index.html#')
+    browser.get('http://hillalistair.com/projects/angular/index.html#')
     expect(browser.getTitle()).toEqual('Search Users')
   })
 
